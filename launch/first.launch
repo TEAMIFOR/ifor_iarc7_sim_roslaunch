@@ -2,10 +2,16 @@
 	<include file="$(find gazebo_ros)/launch/empty_world.launch">
     	<arg name="world_name" value="$(find nquad)/worlds/ifor_iarc_ground.world"/>
  	</include>
- 	<group ns="robot4">
+ 	<group ns="robot0">
     <include file="$(find nquad)/launch/obstacle.launch">
-      <arg name="robot_name" value="robot4"/>
+      <arg name="robot_name" value="robot0"/>
       <arg name="init_pose" value="-x 5 -y 0 -z 0 -Y 0"/>
     </include>
-  </group>	
- </launch>
+</group>
+    <group ns="robot1">
+       <include file="$(find nquad)/launch/obstacle.launch">
+        <arg name="robot_name" value="robot1"/>
+        <arg name="init_pose" value="-x -5 -y 0 -z 0 -Y 0"/>
+      </include>
+    </group>
+</launch>
