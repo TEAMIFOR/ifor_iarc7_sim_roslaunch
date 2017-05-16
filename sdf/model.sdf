@@ -18,7 +18,7 @@
         <pose>0 0 0.047800 0 0 0</pose>
         <geometry>
           <cylinder>
-            <radius>0.016495</radius>
+            <radius>0.19</radius>
             <length>0.061163</length>
           </cylinder>
         </geometry>
@@ -103,6 +103,13 @@
           </range>
         </ray>
       </sensor>
+      <sensor name='my_contact' type='contact'>
+        <plugin name="my_plugin" filename="libcontact.so"/>
+          <contact>
+            <collision>base_collision</collision>
+          </contact>
+          <update_rate> 5 </update_rate>
+        </sensor>
       <sensor name="leftfront_cliff_sensor" type="ray">
         <pose>0.150000 0.040000 0.027000 0 1.570790 0</pose>
         <ray>
@@ -280,17 +287,19 @@
     </joint>
             <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
       <alwaysOn>true</alwaysOn>
-      <updateRate>10</updateRate>
+      <updateRate>1000</updateRate>
       <leftJoint>left_wheel</leftJoint>
       <rightJoint>right_wheel</rightJoint>
-      <wheelSeparation>0.5380</wheelSeparation>
-      <wheelDiameter>0.2410</wheelDiameter>
+      <wheelSeparation>0.2600</wheelSeparation>
+      <wheelDiameter>0.066</wheelDiameter>
             <torque>20</torque>
             <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
 
       </plugin>
+
+
 
     
   </model>
