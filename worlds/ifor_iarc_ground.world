@@ -114,8 +114,8 @@
           </geometry>
           <material>
             <script>
-              <uri>model://iarc_arena/materials/scripts/</uri>
-              <uri>model://iarc_arena/materials/textures/</uri>
+              <uri>model://iarc/materials/scripts/</uri>
+              <uri>model://iarc/materials/textures/</uri>
               <name>IFOR_sim_ground</name>
             </script>
           </material>
