@@ -43,5 +43,5 @@ add_executable(groundbot_node ${GROUND_BOT})
 target_link_libraries(groundbot_node ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 
-#add_library(contact SHARED src/ContactPlugin.cc)
-#target_link_libraries(contact ${GAZEBO_libraries})
+add_library(contact SHARED src/ContactPlugin.cc)
+target_link_libraries(contact ${GAZEBO_libraries})
