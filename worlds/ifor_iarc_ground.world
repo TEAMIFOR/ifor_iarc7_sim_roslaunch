@@ -135,7 +135,7 @@
       <real_time>63 379215445</real_time>
       <wall_time>1490720167 321286508</wall_time>
       <model name='[IFOR] IARC sim'>
-        <pose>1 -1 0 0 -0 0</pose>
+        <pose>0 0 0 0 -0 0</pose>
         <link name='field'>
           <pose>1 -1 0.01 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
@@ -158,6 +158,6 @@
         <pose>16.9434 -19.2161 5.64718 0 0.275643 2.3562</pose>
         <view_controller>orbit</view_controller>
       </camera>
-    </gui>
-  </world>
+    </gui
+ > </world>
 </sdf>
