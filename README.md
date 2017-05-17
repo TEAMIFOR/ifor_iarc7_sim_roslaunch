@@ -6,6 +6,7 @@ gazebo_ros_pkgs works with gazebo2
 create a copy of models in ~./gazebo/models/nquad/
 
 ```
+$ git clone https://github.com/ros-simulation/gazebo_ros_pkgs
 $ roslaunch nquad first.launch
 $ rosrun nquad groundbot.py
 ```
