@@ -69,10 +69,19 @@ def velgiv(i):
 	rate=rospy.Rate(20)
 
 	while not rospy.is_shutdown():
-		subdiv.angular.x=subdiv.angular.y=subdiv.linear.z=0
-		subdiv.linear.x=1
-		subdiv.angular.z=0.2
-		pub.publish(subdiv)
+		if(splt[i]=='0'):
+			subdiv.angular.x=subdiv.angular.y=subdiv.linear.z=0
+			subdiv.linear.x=0.33
+			subdiv.angular.z=0.066
+			pub.publish(subdiv)
+		else:
+			subdiv.linear.x=subdiv.linear.y=subdiv.linear.z=subdiv.angular.x=subdiv.angular.y=0
+			subdiv.angular.z=0
+			current_time=time()
+			required_time=current_time+(pi/1)
+			while(time()<required_time):
+				pub.publish(subdiv)
+			rate.sleep()
 
 
 def main ():
