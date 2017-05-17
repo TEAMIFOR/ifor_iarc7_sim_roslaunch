@@ -1,5 +1,5 @@
 # ifor_iarc7_sim_roslaunch
-launches iarc7_sim_ground in gazebo with ros wrappers
+launches iarc mission 7 simulation environment in gazebo with ros wrappers
 
 
 gazebo_ros_pkgs works with gazebo2
