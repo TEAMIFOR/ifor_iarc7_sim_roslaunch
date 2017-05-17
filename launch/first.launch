@@ -5,13 +5,88 @@
  	<group ns="robot0">
     <include file="$(find nquad)/launch/obstacle.launch">
       <arg name="robot_name" value="robot0"/>
-      <arg name="init_pose" value="-x 5 -y 0 -z 0 -Y 0"/>
+      <arg name="init_pose" value="-x 0 -y 1 -z 0 -Y 1.57"/>
     </include>
 </group>
     <group ns="robot1">
        <include file="$(find nquad)/launch/obstacle.launch">
         <arg name="robot_name" value="robot1"/>
-        <arg name="init_pose" value="-x -5 -y 0 -z 0 -Y 0"/>
+        <arg name="init_pose" value="-x 0.6 -y 0.8 -z 0 -Y 0.927"/>
       </include>
     </group>
+   <group ns="robot2">
+       <include file="$(find nquad)/launch/obstacle.launch">
+        <arg name="robot_name" value="robot2"/>
+        <arg name="init_pose" value="-x 0.95 -y 0.3122 -z 0 -Y 0.3175"/>
+      </include>
+    </group>
+    <group ns="robot3">
+       <include file="$(find nquad)/launch/obstacle.launch">
+        <arg name="robot_name" value="robot3"/>
+        <arg name="init_pose" value="-x 0.95 -y -0.3122 -z 0 -Y -0.3175"/>
+      </include>
+    </group>
+    <group ns="robot4">
+       <include file="$(find nquad)/launch/obstacle.launch">
+        <arg name="robot_name" value="robot4"/>
+        <arg name="init_pose" value="-x 0.6 -y -0.8 -z 0 -Y -0.927"/>
+      </include>
+    </group>
+    <group ns="robot5">
+       <include file="$(find nquad)/launch/obstacle.launch">
+        <arg name="robot_name" value="robot5"/>
+        <arg name="init_pose" value="-x 0 -y -1 -z 0 -Y -1.57"/>
+      </include>
+    </group>
+    <group ns="robot6">
+       <include file="$(find nquad)/launch/obstacle.launch">
+        <arg name="robot_name" value="robot6"/>
+        <arg name="init_pose" value="-x -0.6 -y -0.8 -z 0 -Y -2.497"/>
+      </include>
+    </group>
+    <group ns="robot7">
+       <include file="$(find nquad)/launch/obstacle.launch">
+        <arg name="robot_name" value="robot7"/>
+        <arg name="init_pose" value="-x -0.95 -y -0.3122 -z 0 -Y -2.8145"/>
+      </include>
+    </group>
+      <group ns="robot8">
+       <include file="$(find nquad)/launch/obstacle.launch">
+        <arg name="robot_name" value="robot8"/>
+        <arg name="init_pose" value="-x -0.95 -y 0.3122 -z 0 -Y -3.14"/>
+      </include>
+    </group>
+      <group ns="robot9">
+       <include file="$(find nquad)/launch/obstacle.launch">
+        <arg name="robot_name" value="robot9"/>
+        <arg name="init_pose" value="-x -0.6 -y 0.8 -z 0 -Y -4.067"/>
+      </include>
+    </group>
+    <group ns="robot10">
+       <include file="$(find nquad)/launch/obj.launch">
+        <arg name="robot_name" value="robot10"/>
+        <arg name="init_pose" value="-x 5 -y 1.657 -z 0 -Y -1.57"/>
+      </include>
+    </group>
+     <group ns="robot11">
+       <include file="$(find nquad)/launch/obj.launch">
+        <arg name="robot_name" value="robot11"/>
+        <arg name="init_pose" value="-x -5 -y -1.657 -z 0 -Y 1.57"/>
+      </include>
+    </group>
+     <group ns="robot12">
+       <include file="$(find nquad)/launch/obj.launch">
+        <arg name="robot_name" value="robot12"/>
+        <arg name="init_pose" value="-x -1.657 -y 5 -z 0 -Y 0"/>
+      </include>
+    </group>
+     <group ns="robot13">
+       <include file="$(find nquad)/launch/obj.launch">
+        <arg name="robot_name" value="robot13"/>
+        <arg name="init_pose" value="-x 1.657 -y -5 -z 0 -Y 3.14"/>
+      </include>
+    </group>
+
+
+
 </launch>
