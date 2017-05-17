@@ -18,10 +18,9 @@ def callback(data):
 	 	
 def velgive(i):
 	pub=rospy.Publisher('/robot{}/cmd_vel'.format(i),Twist,queue_size=10)
-	
 	subdiv=Twist()
 	count=0
-	rate=rospy.Rate(10)
+	rate=rospy.Rate(20)
 	while not rospy.is_shutdown():
 		now=rospy.get_rostime()
 		change_angle=random.randint(0,20)
@@ -57,22 +56,35 @@ def velgive(i):
 				rospy.loginfo(s)
 				rate.sleep()
 
-
-
 			subdiv.angular.z=subdiv.angular.x=subdiv.angular.y=subdiv.linear.y=subdiv.linear.z=0
 			subdiv.linear.x=0.33
 			rospy.loginfo(s)
 			pub.publish(subdiv)
 			rate.sleep()
-			
+
+def velgiv(i):
+	pub=rospy.Publisher('/robot{}/cmd_vel'.format(i),Twist,queue_size=10)
+	subdiv=Twist()
+
+	rate=rospy.Rate(20)
+
+	while not rospy.is_shutdown():
+		subdiv.angular.x=subdiv.angular.y=subdiv.linear.z=0
+		subdiv.linear.x=1
+		subdiv.angular.z=0.2
+		pub.publish(subdiv)
+
+
 def main ():
 	rospy.init_node("cmd_vel",anonymous=True)
 	rospy.Subscriber("/contact",String,callback)
 	while len(splt)==0:
 		continue
-	for i in range(0,2):
-		rospy.loginfo(splt)
-		t=threading.Thread(target=velgive,args=(i,))
+	for i in range(0,14):
+		if (i<10):
+			t=threading.Thread(target=velgive,args=(i,))
+		else:
+			t=threading.Thread(target=velgiv,args=(i,))
 		#t.daemon=True
 		t.start()
 		
